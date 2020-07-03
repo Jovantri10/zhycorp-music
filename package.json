@@ -1,0 +1,19 @@
+{
+ "name": "zhycorp-bot",
+ "version": "0.0.1",
+ "description": "Bot Template.",
+ "scripts": {
+  "start": "node server.js'
+ },
+ "engines": {
+  "node": "12.x"
+ },
+ "dependencies": {
+  "discord.js": "*",
+  "discord-player": "*",
+  "opusscript": "*",
+  "node-opus": "*",
+  "@discordjs/opus": "*"
+ }
+ "author": "ZhyCorp"
+}
