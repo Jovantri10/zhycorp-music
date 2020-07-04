@@ -15,6 +15,6 @@
   "node-opus": "*",
   "@discordjs/opus": "*",
   "express": "*"
- }
+ },
  "author": "ZhyCorp"
 }
