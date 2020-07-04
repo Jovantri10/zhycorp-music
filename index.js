@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({
- disableMentions: 'all'
+ disableMentions: 'everyone'
 });
 
 const PREFIX = '#!';
