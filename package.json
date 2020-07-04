@@ -3,7 +3,7 @@
  "version": "0.0.1",
  "description": "Bot Template.",
  "scripts": {
-  "start": "node server.js'
+  "start": "node server.js"
  },
  "engines": {
   "node": "12.x"
@@ -13,7 +13,8 @@
   "discord-player": "*",
   "opusscript": "*",
   "node-opus": "*",
-  "@discordjs/opus": "*"
+  "@discordjs/opus": "*",
+  "express": "*"
  }
  "author": "ZhyCorp"
 }
