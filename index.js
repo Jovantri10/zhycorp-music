@@ -124,7 +124,7 @@ bot.on('message', async message => {
   const Embed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
         .setTitle(`Commands for ${bot.user.username}!`)
-        .setDescription(`\`help\`,\`play\`,\`skip\`,\`stop\`,\`pause\`,\`resume\`,\`queue\`,\`set-volume\`,\`clear-queue\`,\`np\``)
+        .setDescription(`\`help\`,\`play\`,\`skip\`,\`stop\`,\`pause\`,\`resume\`,\`queue\`,\`set-volume\`,\`clear-queue\`,\`np\`,\`loop\``)
 	.setTimestamp()
 
 message.channel.send(Embed)
@@ -146,6 +146,17 @@ message.channel.send(Embed)
     let song = await client.player.nowPlaying(message.guild.id);
 
     message.channel.send(`🎶 Now Playing:\n${song.name} by \`${song.requestedBy}\``);
+
+ }
+ if (cmd === 'loop' || cmd === 'repeat') {
+  if(!message.member.voice.channel) return message.channel.send(`You must be in a voice channel!`);
+if(!client.player.isPlaying(message.guild.id)) return message.channel.send(`You must be in a voice channel!`);
+
+client.player.setRepeatMode(message.guild.id, true);
+ // Get the current song
+ let song = await client.player.nowPlaying(message.guild.id);
+  
+ message.channel.send(`🚀 | Repeating ${song.name}!`);  
 
  }
 });
